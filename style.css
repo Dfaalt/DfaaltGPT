@@ -185,18 +185,18 @@ body {
   }
 
   .input-container {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row; /* Menyusun elemen secara horizontal */
+    justify-content: space-between; /* Mengatur jarak antara elemen-elemen dalam container */
     padding: 10px;
   }
 
   #user-input {
-    width: calc(100% - 15px);
-    margin-bottom: 10px;
+    width: calc(75% - 15px); /* Lebar input dikurangi lebar tombol dan margin */
+    margin-right: auto; /* Menambahkan margin antara input dan tombol */
   }
 
   #send-button {
-    display: block;
-    width: 25%;
-    margin: 0 auto;
+    width: 10%; /* Lebar tombol */
   }
 }
