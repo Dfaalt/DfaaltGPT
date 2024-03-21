@@ -12,7 +12,7 @@ userInput.addEventListener("keydown", (event) => {
 });
 
 function sendMessage() {
-  const message = userInput.value.trim();
+  const message = userInput.value.trim().toLowerCase();
   // jika pesan = nothing
   if (message === "") {
     return;
@@ -31,6 +31,18 @@ function sendMessage() {
     }, 2000);
     return;
   }
+
+    // Menambahkan kondisi untuk pertanyaan tentang Ilham atau Dfaalt
+    else if (message.includes("ilham") || message.includes("dfaalt")) {
+      userInput.value = "";
+      appendMessage("user", message);
+      setTimeout(() => {
+        appendMessage("bot", "Ilham Maulana adalah Developer saya.");
+        buttonIcon.classList.add("fa-solid", "fa-paper-plane");
+        buttonIcon.classList.remove("fas", "fa-spinner", "fa-pulse");
+      }, 2000);
+      return;
+    }
 
   //   selain yang diatas
   appendMessage("user", message);
