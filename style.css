@@ -168,3 +168,34 @@ body {
   background-color: #19c37d;
   padding: 10px 8px 11px;
 }
+
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo img {
+    width: 80px;
+  }
+
+  .input-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  #user-input {
+    width: calc(100% - 15px);
+    margin-bottom: 10px;
+  }
+
+  #send-button {
+    display: block;
+    width: 25%;
+    margin: 0 auto;
+  }
+}
