@@ -32,7 +32,7 @@ function sendMessage() {
     return;
   }
 
-  // Menambahkan kondisi untuk pertanyaan tentang Ilham atau Dfaalt
+  // jika pesan = Ilham atau Dfaalt
   else if (
     message.includes("ilham") ||
     message.includes("dfaalt") ||
